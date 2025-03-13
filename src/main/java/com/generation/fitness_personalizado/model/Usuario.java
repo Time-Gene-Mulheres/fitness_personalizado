@@ -41,12 +41,12 @@ public class Usuario {
 	@Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres")
 	private String foto;
 	
-	@NotBlank(message = "O Atributo altura é Obrigatório!")
+	@NotNull(message = "O Atributo altura é Obrigatório!")
 	@DecimalMin(value = "0.00", message = "A altura deve ser diferente de zero.")
     @DecimalMax(value = "3.00", message = "A altura deve ser no máximo três metros.")
 	private double altura;
 	
-	@NotBlank(message = "O peso é Obrigatório!")
+	@NotNull(message = "O peso é Obrigatório!")
 	@DecimalMin(value = "0.00", message = "O peso deve ser diferente de zero.")
     @DecimalMax(value = "300.0", message = "O peso deve ser no máximo 300kg.")
 	private double peso;
