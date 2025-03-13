@@ -1,6 +1,6 @@
 package com.generation.fitness_personalizado.model;
 
-public class Produto {
+public class Treino {
 	
 	private Long id;
 	
