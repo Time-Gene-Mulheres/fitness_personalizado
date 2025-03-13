@@ -12,6 +12,8 @@ public class Usuario {
 	
 	private String senha;
 	
+	private double altura;
 	
+	private double peso;
 	
 }
