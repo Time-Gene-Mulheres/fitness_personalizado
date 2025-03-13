@@ -15,7 +15,7 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 @Entity
-@Table(name = "tb_treino")
+@Table(name = "tb_treinos")
 
 public class Treino {
 	
@@ -37,11 +37,10 @@ public class Treino {
 	//pensar em como restringir (Leve/Moderado/Intenso)
 	@NotBlank(message = "O atributo intensidade é obrigatorio")
 	@Size(min = 4, message = " A intensidade tem que ser maior que 4 caracteres")
-	@Pattern(regexp = "(?i)Leve|Moderado|Intenso", message = "A intensidade deve ser 'Leve', 'Moderado' ou 'Intenso'")
 	private String intensidade;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("usuario")
+	@JsonIgnoreProperties("treino")
 	private Usuario usuario;
 	
 	@ManyToOne
@@ -103,5 +102,7 @@ public class Treino {
 	public void setIntensidade(String intensidade) {
 		this.intensidade = intensidade;
 	}
+	
+	
 	
 }

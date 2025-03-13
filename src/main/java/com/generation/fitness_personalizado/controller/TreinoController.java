@@ -59,13 +59,13 @@ public class TreinoController {
 	}
 	
 	//Cadastrar treino
-	@PostMapping
-	public ResponseEntity<Treino> post(@Valid @RequestBody Treino treino){
-		if(treinoRepository.existsById(treino.getCategoria().getId()))
-		return ResponseEntity.status(HttpStatus.CREATED)
-				.body(treinoRepository.save(treino));
-		throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Categoria não existe!", null);
-	}
+    @PostMapping
+    public ResponseEntity<Treino> post(@Valid @RequestBody Treino treino){
+        if(categoriaRepository.existsById(treino.getCategoria().getId()))
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(treinoRepository.save(treino));
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Categoria não existe!", null);
+    }
 	
 	//Atualizar treino
 	@PutMapping
