@@ -14,7 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -25,7 +25,7 @@ public class Categoria {
 	@GeneratedValue(strategy  = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotNull(message = "O campo \"Descrição\" é de preenchimento obrigatório!")
+	@NotBlank(message = "O campo \"Descrição\" é de preenchimento obrigatório!")
 	@Size(min = 3, max = 100, message = "O campo \"Descrição\" é de preenchimento obrigatório!")
 	@Column(unique = true)
 	private String descricao;
