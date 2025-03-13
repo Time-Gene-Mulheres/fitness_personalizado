@@ -10,6 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
@@ -29,7 +30,7 @@ public class Treino {
 	@Size(min = 5, message = " A descrição tem que ser maior que 5 caracteres")
 	private String descricao;
 	
-	@NotBlank(message = "O atributo duração é obrigatorio")
+	@NotNull(message = "O atributo duração é obrigatorio")
 	@Min(5)
 	private int duracao;
 	
