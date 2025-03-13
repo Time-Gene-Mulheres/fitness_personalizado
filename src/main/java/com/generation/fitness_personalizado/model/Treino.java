@@ -41,19 +41,7 @@ public class Treino {
 	
 	@ManyToOne
 	@JsonIgnoreProperties("treino")
-	private Usuario usuario;
-	
-	@ManyToOne
-	@JsonIgnoreProperties("treino")
 	private Categoria categoria;
-
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
 
 	public Categoria getCategoria() {
 		return categoria;

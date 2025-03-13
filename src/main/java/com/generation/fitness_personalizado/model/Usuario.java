@@ -55,8 +55,6 @@ public class Usuario {
 	@JsonIgnoreProperties("usuario")
 	private List<Categoria> categoria;
 	
-	
-	
 	public Long getId() {
 		return this.id;
 	}
