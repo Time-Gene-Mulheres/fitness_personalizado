@@ -20,6 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.generation.fitness_personalizado.model.Usuario;
 import com.generation.fitness_personalizado.repository.UsuarioRepository;
+import com.generation.fitness_personalizado.service.UsuarioService;
 
 import jakarta.validation.Valid;
 
@@ -30,6 +31,9 @@ public class UsuarioController {
     
     @Autowired
     private UsuarioRepository usuarioRepository;
+    
+    @Autowired
+    private UsuarioService usuarioService;
     
     @GetMapping
     public ResponseEntity<List<Usuario>> getAll(){
@@ -49,7 +53,14 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioRepository.findAllByUsuarioContainingIgnoreCase(usuario));
         		
         		 
-    } 
+    }
+    
+    @GetMapping("/imc")
+    public ResponseEntity<Usuario> getImc(Optional<Usuario> usuario) {
+    	
+    	return ResponseEntity.ok(usuarioService.calcularIMC(usuario.get().getId()));
+    	
+    }
     
     @PostMapping
     public ResponseEntity<Usuario> post(@Valid @RequestBody Usuario usuario){
@@ -76,4 +87,5 @@ public class UsuarioController {
         usuarioRepository.deleteById(id);               
     }
 
+    
 }
