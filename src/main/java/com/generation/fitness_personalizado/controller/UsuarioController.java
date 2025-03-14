@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.generation.fitness_personalizado.model.Usuario;
+import com.generation.fitness_personalizado.model.UsuarioImc;
 import com.generation.fitness_personalizado.repository.UsuarioRepository;
 import com.generation.fitness_personalizado.service.UsuarioService;
 
@@ -55,6 +56,11 @@ public class UsuarioController {
         		 
     }
 
+    @GetMapping("/imc/{id}")
+    public ResponseEntity<Optional<UsuarioImc>> getImc(@PathVariable Long id) {
+        return ResponseEntity.ok(usuarioService.calcularImc(id));
+    }	
+    
     @PostMapping
     public ResponseEntity<Usuario> post(@Valid @RequestBody Usuario usuario){
         return ResponseEntity.status(HttpStatus.CREATED)
