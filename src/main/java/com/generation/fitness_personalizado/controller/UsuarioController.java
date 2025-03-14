@@ -54,14 +54,7 @@ public class UsuarioController {
         		
         		 
     }
-    
-    @GetMapping("/imc")
-    public ResponseEntity<Usuario> getImc(Optional<Usuario> usuario) {
-    	
-    	return ResponseEntity.ok(usuarioService.calcularIMC(usuario.get().getId()));
-    	
-    }
-    
+
     @PostMapping
     public ResponseEntity<Usuario> post(@Valid @RequestBody Usuario usuario){
         return ResponseEntity.status(HttpStatus.CREATED)
