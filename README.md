@@ -1,28 +1,26 @@
-Fitness Personalizado
-O Fitness Personalizado é um aplicativo que visa oferecer planos de treino adaptados às necessidades e objetivos específicos de cada usuário. Desenvolvido com Java e Spring Boot, o sistema permite criar, gerenciar e acompanhar rotinas de treino, proporcionando uma experiência mais eficiente e personalizada para quem busca melhorar sua forma física.
+# Move Plus
 
-Funcionalidades
-Cadastro de Usuários: Permite que usuários criem contas, informem seus dados pessoais e definam seus objetivos (perda de peso, ganho de massa muscular, etc.).
+Move Plus é uma aplicação desenvolvida para oferecer treinos físicos personalizados com base nos objetivos e características de cada usuário. Utilizando Java e Spring Boot, o sistema facilita o gerenciamento de rotinas de treino, proporcionando uma experiência adaptada a cada indivíduo.
 
-Criação de Treinos Personalizados: Com base nos dados do usuário, o aplicativo gera treinos personalizados com diferentes exercícios e séries.
+## Funcionalidades
 
-Acompanhamento de Progresso: Usuários podem registrar seus treinos, acompanhar seu progresso e realizar ajustes conforme necessário.
+- **Cadastro de Usuários**: Criação de contas e definição de objetivos de fitness.
+- **Criação de Treinos Personalizados**: Geração de planos de treino adaptados às metas do usuário.
+- **Acompanhamento de Progresso**: Registro de treinos e monitoramento de evolução.
+- **Exercícios Variados**: Acesso a uma ampla gama de exercícios com explicações detalhadas.
 
-Exercícios Variados: O sistema oferece uma ampla gama de exercícios, com explicações e instruções detalhadas.
+## Tecnologias Utilizadas
 
-Tecnologias Utilizadas
-Back-end: Java, Spring Boot
+- **Back-end**: Java, Spring Boot
+- **Banco de Dados**: MySQL
+- **Autenticação**: Spring Security
+- **APIs**: RESTful APIs
+- **Versionamento de Código**: Git, GitHub
 
-Banco de Dados: MySQL
+## Licença
 
-Autenticação: Spring Security
-
-APIs: Restful APIs
-
-Versionamento de Código: Git, GitHub
-
-Licença
 Este projeto está licenciado sob a MIT License - consulte o arquivo LICENSE para mais detalhes.
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/79b44646-7b4c-449d-a07f-3349ee48b6c1" alt="README move plus" width="1000">
